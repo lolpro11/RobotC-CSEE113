@@ -1,6 +1,6 @@
 #pragma platform(NXT)
 #pragma DebuggerWindows("nxtLCDScreen")
-
+//very inconsistent 
 void forward(int x){
 	motor[motorB] = 100;
   motor[motorC]  = 100;
