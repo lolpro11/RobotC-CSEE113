@@ -14,40 +14,42 @@
 |*  MAKE SURE TO "SAVE AS" INSTEAD    *|
 \***********************************  */
 
+/* MIT License
 
+Copyright (c) 2022 lolpro11 and Dominic Diaz
 
-void driveStraight (int powerLevel) {
-	string forwardStatus = "Moving Forward...";
-	displayTextLine(2, "%s", forwardStatus);
-	motor[motorC] = powerLevel;
-	motor[motorB] = powerLevel;
-}
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-void driveBack (int powerLevel) {
-	string backwardStatus = "Moving Backward...";
-	displayTextLine(2, "%s", backwardStatus);
-	motor[motorC] = powerLevel;
-	motor[motorB] = powerLevel;
-	wait1Msec(1000);
-}
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 
 task main()
 {
-	int fullPower = 100;
-	int partialPower = 30;
-
-
-
-
 	while (SensorValue(touchSensor) == 0) {
 		if (SensorValue(lightSensor) > 20) {
-			driveStraight(partialPower);
+            displayTextLine(2, "Moving Forward...");
+            motor[motorC] = 30;
+            motor[motorB] = 30;
 		}
-
 		else if (SensorValue(lightSensor) < 15){
-			driveBack(-fullPower);
+            displayTextLine(2, "Moving Backward...");
+            motor[motorC] = -100;
+            motor[motorB] = -100;
+            wait1Msec(1000);
 		}
-
 	}
-
 }
