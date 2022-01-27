@@ -39,6 +39,10 @@ SOFTWARE.
 
 task main()
 {
+	
+	displayString(1, "Dominic Diaz");
+	displayString(3, "Joshua Wong");
+
 	while (SensorValue(touchSensor) == 0) {
 		if (SensorValue(lightSensor) > 20) {
             displayTextLine(2, "Moving Forward...");
