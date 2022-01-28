@@ -31,7 +31,10 @@ void turn90Left(int wheelLeft, int wheelRight)
 task main()
 {
     int maximumSpeed = 100;
-    displayTextLine(3,"DoorMat");
+    displayString(1, "Andrew Cini");
+	displayString(3, "Joshua Wong");
+    displayString(5, "Abraham Orea");
+    //displayTextLine(3,"DoorMat");
 
     goForward(maximumSpeed);
     wait1Msec(1000);

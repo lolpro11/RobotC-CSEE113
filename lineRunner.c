@@ -40,8 +40,10 @@ SOFTWARE.
 task main()
 {
 	
-	displayString(1, "Dominic Diaz");
+	//displayString(1, "Dominic Diaz");
+    displayString(1, "Andrew Cini");
 	displayString(3, "Joshua Wong");
+    displayString(5, "Abraham Orea");
 
 	while (SensorValue(touchSensor) == 0) {
 		if (SensorValue(lightSensor) > 20) {

@@ -5,11 +5,13 @@
 #pragma config(Motor,  motorA,          gripperMotor,       tmotorNormal, PIDControl, encoder)
 #pragma config(Motor,  motorB,          rightMotor,         tmotorNormal, PIDControl, encoder)
 #pragma config(Motor,  motorC,          leftMotor,          tmotorNormal, PIDControl, encoder)
-//Made by Dominic Diaz
+
 task main()
 {
-	displayString(1, "Dominic Diaz");
+	//displayString(1, "Dominic Diaz");
+    displayString(1, "Andrew Cini");
 	displayString(3, "Joshua Wong");
+    displayString(5, "Abraham Orea");
 
 	motor[motorC] = 100;
 	motor[motorB] = 100;

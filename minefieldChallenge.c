@@ -48,8 +48,10 @@ void avoidWall() {
 
 task main()
 {
-	displayString(1, "Dominic Diaz");
+	//displayString(1, "Dominic Diaz");
+    displayString(1, "Andrew Cini");
 	displayString(3, "Joshua Wong");
+    displayString(5, "Abraham Orea");
   for (int i = 0; i <= 2; i++) {
   	while(SensorValue(sonar) > 50)
   	{
