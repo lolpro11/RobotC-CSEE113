@@ -28,8 +28,8 @@ void turnRight90()
 }
 task main()
 {
-	int fullPower = 100;
-	int halfPower = 50;
+	//int fullPower = 100;
+	//int halfPower = 50;
 
 	turnRight90();
 
@@ -37,11 +37,11 @@ task main()
 	{
 		if (SensorValue(touchSensor) == 0)
 		{
-			driveStraight(fullPower);
+			driveStraight(100);
 		}
 		else
 		{
-			driveStraight(-fullPower);
+			driveStraight(-100);
 			wait1Msec(500);
 			turnRight90();
 		}
