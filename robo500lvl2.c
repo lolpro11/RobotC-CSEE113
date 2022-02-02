@@ -7,7 +7,7 @@ task main() {
             if (SensorValue(touchSensor) == 0) {
                 motor[motorB] = 100;
                 motor[motorC]  = 100;
-                displayTextLine(0, "Moving Forward.")
+                displayTextLine(0, "Moving Forward.");
             } 
             else {
                 motor[motorB] = -100;
