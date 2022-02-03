@@ -5,7 +5,7 @@
 |*  Robot: Buggy Bot                  *|
 \**************************************/
 
-int threshold = 20;
+//int threshold = 20;
 
 task main()
 {
@@ -15,14 +15,14 @@ task main()
     motor[leftMotor]  = 100;
 
 
-    if(SensorValue(sonar) < threshold && SensorValue(sonar) != -1)
+    if(SensorValue(sonar) < 20 && SensorValue(sonar) != NULL)
     {
       motor[rightMotor] = -75;
       motor[leftMotor]  = 75;
       wait1Msec(1000);
 
 
-      while(SensorValue(sonar) < (threshold * 2))
+      while(SensorValue(sonar) < 40)
       {
         motor[rightMotor] = -75;
         motor[leftMotor]  = 75;
